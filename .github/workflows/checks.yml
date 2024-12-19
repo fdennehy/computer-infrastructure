@@ -12,7 +12,11 @@ jobs:
         run: wget --version
       - name: Test curl
         run: curl --version
-      - name: Test fortune
-        run: fortune
       - name: Output path
         run: echo "$PATH"
+      - name: Update APT
+        run: sudo apt-get update
+      - name: Install fortune
+        run: sudo apt-get install fortune
+      - name: Test fortune
+        run: /usr/games/fortune
