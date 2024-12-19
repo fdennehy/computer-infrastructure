@@ -4,7 +4,10 @@ on:
   schedule:
     - cron: "07 11 * * *" # Runs every day at 11:07 a.m.
   workflow_dispatch: # Allows manual triggering
-  
+
+permissions:
+  contents: write
+
 jobs:
   weather:
     runs-on: ubuntu-latest
@@ -30,5 +33,5 @@ jobs:
     - name: Commit and Push Changes
       run: |
         git add .
-        git commit -m "Update weather data"
+        git commit -m "Adding today's weather"
         git push
