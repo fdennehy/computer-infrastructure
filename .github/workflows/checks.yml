@@ -23,9 +23,7 @@ jobs:
     # Step 3: Generate a fortune and save it to a file
     - name: Generate fortune and save output
       run: |
-        mkdir -p data/fortunes
-        timestamp=$(date +"%Y%m%d_%H%M%S")
-        fortune | cowsay > data/fortunes/$timestamp.txt
+        fortune | cowsay > `date + "data/fortunes/%Y%m%d_%H%M%S.txt"`       
 
     # Step 4: Commit and push changes
     - name: Configure Git
