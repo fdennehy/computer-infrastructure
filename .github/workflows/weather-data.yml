@@ -1,0 +1,34 @@
+name: Daily Weather Run
+
+on:
+  schedule:
+    - cron: "07 11 * * *" # Runs every day at 11:07 a.m.
+  workflow_dispatch: # Allows manual triggering
+  
+jobs:
+  weather:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Check out the repository
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Step 2: Provide execution permissions to weather script and run it
+    - name: Run Weather Script
+      run: |
+        chmod +x weather.sh
+        ./weather.sh
+
+    # Step 3: Configure Git config
+    - name: Configure Git
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@users.noreply.github.com"
+
+    # Step 4: Commit and push changes
+    - name: Commit and Push Changes
+      run: |
+        git add .
+        git commit -m "Update weather data"
+        git push
