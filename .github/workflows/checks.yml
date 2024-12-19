@@ -23,6 +23,7 @@ jobs:
     # Step 3: Generate a fortune and save it to a file
     - name: Generate fortune and save output
       run: |
+        mkdir -p data/fortunes
         fortune | cowsay > `date + "data/fortunes/%Y%m%d_%H%M%S.txt"`       
 
     # Step 4: Commit and push changes
@@ -33,8 +34,9 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        git add data/fortunes/
-        git commit -m "Add fortune file: $timestamp"
+        git add .
+        git commit -m "Adding today's fortune!"
         git push
       env:
+        # Ensure permissions for pushing changes
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
