@@ -27,7 +27,7 @@ jobs:
     - name: Generate fortune and save output
       run: |
         mkdir -p data/fortunes
-        fortune | cowsay > `date + "data/fortunes/%Y%m%d_%H%M%S.txt"`       
+        fortune | cowsay > `date + "data/fortunes/%Y%m%d_%H%M%S.txt"`
 
     # Step 4: Commit and push changes
     - name: Configure Git
