@@ -6,12 +6,12 @@ This repository primarily contains a Jupyter notebook which demonstrates how to 
 
 ## Repsoitory Contents
 
-  - .github/workflows: foldere containing weather-data.yml file which is used by GitHub Actions workflow to automate the weather.sh script to run daily and push the new data to this repsoitory. 
-  - data: contains a `timestamps` folder used to store timestamp-generated filenames/data and a `weather` folder used for weather data output of script / GitHub Action workflow.
-  - .gitignore file: .gitignore file using Python, MacOS and Windows templates.
-  - requirements.txt: included in the repository for easy installation, it contains required Python libraries.
-  - weather.ipynb: Jupyter Notebook described above.
-  - weather.sh: script that fetches Athenry's weather data for today, and saves it in the data/weather folder.
+  - `.github/workflows`: folder containing weather-data.yml file which is used by GitHub Actions workflow to automate the weather.sh script to run daily and push the new data to this repsoitory. 
+  - `data`: folder containing a `timestamps` folder used to store timestamp-generated filenames/data and a `weather` folder used for weather data output of script / GitHub Action workflow.
+  - `.gitignore`: file using Python, MacOS and Windows gitignore templates.
+  - `requirements.txt`: included in the repository for easy installation, it contains required Python libraries.
+  - `weather.ipynb`: Jupyter Notebook described above.
+  - `weather.sh`: script that fetches the latest Athenry weather data, and saves it in the `data/weather` folder.
 
 ## Purpose
 
