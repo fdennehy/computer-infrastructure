@@ -6,9 +6,8 @@ This repository primarily contains a Jupyter notebook which demonstrates how to 
 
 ## Repsoitory Contents
 
-  - weather-data.yml: Yaml file which is used by GitHub Actions workflow to automate the weather.sh script to run daily and push the new data to this repsoitory. 
-  - data/timestamps: folder used to store timestamp-generated filenames and data.
-  - data/weather: folder used for weather data output of script / GitHub Action workflow.
+  - .github/workflows: foldere containing weather-data.yml file which is used by GitHub Actions workflow to automate the weather.sh script to run daily and push the new data to this repsoitory. 
+  - data: contains a `timestamps` folder used to store timestamp-generated filenames/data and a `weather` folder used for weather data output of script / GitHub Action workflow.
   - .gitignore file: .gitignore file using Python, MacOS and Windows templates.
   - requirements.txt: included in the repository for easy installation, it contains required Python libraries.
   - weather.ipynb: Jupyter Notebook described above.
@@ -50,12 +49,7 @@ You can run the Jupyter notebook either locally on your machine or directly in t
    pip install -r requirements.txt
    ```
 
-3. Open the repository in Visual Studio Code:
-   ```bash
-   code .
-   ```
-
-4. Launch the Jupyter notebook:
+3. Launch the Jupyter notebook:
    - Open the notebook `weather.ipynb` in VS Code.
    - Select the appropriate Python interpreter to run the notebook.
 
