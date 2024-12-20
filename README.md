@@ -1,4 +1,4 @@
-# My Computer Infrastructure Assessment Repository
+# Computer Infrastructure Assessment Repository
 
 **by Finbar Dennehy**
 
