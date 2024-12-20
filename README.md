@@ -2,16 +2,29 @@
 
 **by Finbar Dennehy**
 
-This repository contains a Jupyter notebook that demonstrates how to use the `scikit-learn` library to perform machine learning tasks. 
-The notebook covers key steps in building a machine learning model, including data preprocessing, training, evaluation, and prediction.
+This repository primarily contains a Jupyter notebook which demonstrates how to navigate and interact with files and folders via the command line. Within a few short commands, the user is taken from creating a directory structure to ingesting and analysing real weather data using pandas. Below is a brief description of the other files and folders included in this repository:
 
 ## Repsoitory Contents
 
-- **`ml_with_scikit_learn.ipynb`**: The main Jupyter notebook that includes Python code and explanations for:
-  - Loading and exploring datasets.
-  - Data preprocessing (e.g., scaling, encoding).
-  - Building and training machine learning models.
-  - Evaluating model performance.
+  - weather-data.yml: Yaml file which is used by GitHub Actions workflow to automate the weather.sh script to run daily and push the new data to this repsoitory. 
+  - data/timestamps: folder used to store timestamp-generated filenames and data.
+  - data/weather: folder used for weather data output of script / GitHub Action workflow.
+  - .gitignore file: .gitignore file using Python, MacOS and Windows templates.
+  - requirements.txt: included in the repository for easy installation, it contains required Python libraries.
+  - weather.ipynb: Jupyter Notebook described above.
+  - weather.sh: script that fetches Athenry's weather data for today, and saves it in the data/weather folder.
+
+## Purpose
+
+The purpose of this repo is to demonstrate ability in the following:
+
+1. Use, configure, and script in a command line interface environment.
+
+2. Manipulate and move data and code using the command line.
+
+3. Compare commonly available software infrastructures and architectures.
+
+4. Select appropriate infrastructure for a given computational task.
 
 ## Getting Started
 
@@ -28,61 +41,53 @@ You can run the Jupyter notebook either locally on your machine or directly in t
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/fdennehy/computer-infrastructure
    cd your-repo-name
    ```
 
-2. Create and activate a virtual environment using Anaconda:
-   ```bash
-   conda create --name ml-env python=3.9 -y
-   conda activate ml-env
-   ```
-
-3. Install the required Python libraries:
+2. Install the required Python libraries:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Open the repository in Visual Studio Code:
+3. Open the repository in Visual Studio Code:
    ```bash
    code .
    ```
 
-5. Launch the Jupyter notebook:
-   - Open the notebook `ml_with_scikit_learn.ipynb` in VS Code.
-   - Select the appropriate Python interpreter (`ml-env`) to run the notebook.
+4. Launch the Jupyter notebook:
+   - Open the notebook `weather.ipynb` in VS Code.
+   - Select the appropriate Python interpreter to run the notebook.
 
 ### Option 2: Running in GitHub Codespaces
 
 1. Open the repository on GitHub.
-2. Click the **Code** button and select **Codespaces**.
+2. Click the Code button and select Codespaces.
 3. Create a new Codespace or open an existing one.
-4. Once the environment is ready, open the `ml_with_scikit_learn.ipynb` notebook and start running the cells.
+4. Once the environment is ready, open the `weather.ipynb` notebook and start running the cells.
 
 ## Requirements
 
 The following Python libraries are required to run the notebook:
 
-- scikit-learn
 - pandas
-- numpy
-- matplotlib
-- seaborn
 
 A `requirements.txt` file is included in the repository for easy installation.
 
-## Contributing
+## Get Help
 
-Contributions are welcome! If you have suggestions or improvements, feel free to open an issue or submit a pull request.
+Read the comments provided within the Jupyter Notebook and look up official Python documentation for further usage guidance.
 
-## License
+## Contribute
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Developers are welcome to fork this repo and continue to develop and expand upon it as they wish.
 
-## Acknowledgments
+## Author
 
-- [Scikit-learn documentation](https://scikit-learn.org/stable/documentation.html)
-- [Anaconda](https://www.anaconda.com/)
-- [Visual Studio Code](https://code.visualstudio.com/)
+I'm currently undertaking the HDip in Science in Computing in Data Analytics on a part time basis at ATU
 
-Enjoy exploring machine learning with scikit-learn!
+I have over ten years' experience in capital markets consultancy and have spent the past few years working on software delivery and customer success. I am undertaking this program to better understand our clients, who are predominantly data scientists and data engineers.
+
+## Acknowledgements
+
+Special thanks to my lecturer on the Computer Infrastructure module, Ian McLoughlin, from whom I acquired the skills necessary to put this project together.
